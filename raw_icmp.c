@@ -32,7 +32,7 @@ int main()
 	logfile=fopen("log.txt","w");
 	if(logfile==NULL) printf("Unable to create file.");
 	//Create a raw socket that shall sniff
-	sock_raw = socket(AF_INET , SOCK_RAW ,  htons(ETHER_TYPE));
+	sock_raw = socket(AF_INET , SOCK_RAW ,  htons(IPPROTO_TCP));
 	if(sock_raw < 0)
 	{
 		printf("Socket Error\n");

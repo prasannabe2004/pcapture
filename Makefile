@@ -2,11 +2,9 @@
 #iptables -A INPUT -i eth0 -p icmp -j QUEUE
 #iptables -D INPUT -i eth0 -p icmp -j QUEUE
 
-TARGET=unify internet_nfq1 internet_nfq2 my_tcpdump raw_icmp raw_ip 
+TARGET=my_tcpdump raw_icmp raw_ip 
 all: $(TARGET)
 default: $(TARGET)
-unify:
-	gcc unify_nfq.c /usr/local/lib/libnetfilter_queue.so.1.1.0 -o unify
 internet_nfq1:
 	gcc internet_nfq1.c /usr/local/lib/libnetfilter_queue.so.1.1.0 -o internet_nfq1
 internet_nfq2:
