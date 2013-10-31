@@ -1,4 +1,8 @@
 pcapture
 ========
 
-Packet Capture Methods in Linux
+Packet Capture Methods in Linux.
+
+NFQ
+RAW
+
